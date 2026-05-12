@@ -6,7 +6,7 @@ const CONFIG = {
   // Endpoint interno que lê os produtos da planilha do Google Sheets.
   API_URL: "/api/menu",
   // Número do WhatsApp com DDI (somente dígitos). Ex: 5511999999999
-  WHATSAPP: "551234567890",
+  WHATSAPP: "5598984940944",
   STORAGE_KEY: "cardapio_cart_v1",
 };
 
