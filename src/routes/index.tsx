@@ -7,11 +7,11 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   useEffect(() => {
-    window.location.replace("/index.html");
+    window.location.replace("/menu.html");
   }, []);
   return (
     <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "system-ui, sans-serif" }}>
-      <p>Carregando cardápio… <a href="/index.html">Clique aqui</a> se não for redirecionado.</p>
+      <p>Carregando cardápio… <a href="/menu.html">Clique aqui</a> se não for redirecionado.</p>
     </div>
   );
 }
