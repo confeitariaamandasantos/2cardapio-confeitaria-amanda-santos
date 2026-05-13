@@ -10,28 +10,26 @@ const CONFIG = {
   // Em produção estática (Vercel/GitHub Pages) cai no fetch direto do CSV público.
   API_URL: "/api/menu",
   // Número do WhatsApp com DDI (somente dígitos). Ex: 5511999999999
-  WHATSAPP: "5598984940944",
+  WHATSAPP: "5598981740599",
   STORAGE_KEY: "cardapio_cart_v1",
 };
 
 // Dados de exemplo (usados quando API_URL está vazia ou falha)
 const MOCK_PRODUCTS = [
   
-{ id: 1, nome: "Bolo Vulcão", preco: 30.0, descricao: "Ninho", imagem: "/public/imagens/bolo-vulcao1.avif", categoria: "Bolos e Tortas" },
-{ id: 2, nome: "Bolo Vulcão", preco: 30.0, descricao: "Chocolate", imagem: "/public/imagens/bolo-vulcao1.avif", categoria: "Bolos e Tortas" },
-{ id: 3, nome: "Bolo Vulcão", preco: 30.0, descricao: "Chocolate e Ninho", imagem: "/public/imagens/bolo-vulcao1.avif", categoria: "Bolos e Tortas" },
-{ id: 3, nome: "Bolo Vulcão Com Morangos", preco: 40.0, descricao: "Ninho, Chocolate, Chocolate e Ninho.", imagem: "/public/imagens/bolo-vulcao.avif", categoria: "Bolos e Tortas" },
+{ id: 1, nome: "Bolo Vulcão", preco: 30.0, descricao: "Chocolate, Ninho, Chocolate e Ninho", imagem: "/public/imagens/bolo-vulcao1.avif", categoria: "Bolos e Tortas" },
+{ id: 2, nome: "Bolo Vulcão ( Morangos )", preco: 40.0, descricao: "Ninho, Chocolate, Chocolate e Ninho.", imagem: "/public/imagens/bolo-vulcao.avif", categoria: "Bolos e Tortas" },
 { id: 3, nome: "Bolo de Ceoura", preco: 40.0, descricao: "Cenoura com Chocolate.", imagem: "/public/imagens/bolo-cenoura.avif", categoria: "Bolos e Tortas" },
-{ id: 3, nome: "Bolo de Pote", preco: 10.0, descricao: "Cenoura com Chocolate.", imagem: "/public/imagens/bolo-pote.avif", categoria: "Bolos e Tortas" },
-{ id: 4, nome: "Mini Vulcão", preco: 15.0, descricao: "Ninho, Chocolate, Chocolate e Ninho.", imagem: "/public/imagens/mini-vulcao.avif", categoria: "Bolos e Tortas" },
-{ id: 4, nome: "Copo da Felicidade", preco: 10.0, descricao: "Chocolate trufado 50% cacau, chocolate branco trufado, com pedacos de chocolate meio amargo.", imagem: "/public/imagens/copo-felicidade.avif", categoria: "Bolos e Tortas" },
+{ id: 4, nome: "Bolo de Pote", preco: 10.0, descricao: "Cenoura com Chocolate.", imagem: "/public/imagens/bolo-pote.avif", categoria: "Bolos e Tortas" },
+{ id: 5, nome: "Mini Vulcão", preco: 15.0, descricao: "Ninho, Chocolate, Chocolate e Ninho.", imagem: "/public/imagens/mini-vulcao.avif", categoria: "Bolos e Tortas" },
+{ id: 6, nome: "Copo da Felicidade", preco: 10.0, descricao: "Chocolate trufado 50% cacau, chocolate branco trufado, com pedacos de chocolate meio amargo.", imagem: "/public/imagens/copo-felicidade.avif", categoria: "Bolos e Tortas" },
 { id: 7, nome: "Caseirinho", preco: 15.0, descricao: "Chocolate, Dois Amores, Maracujá, Trigo, Formigueiro", imagem: "/public/imagens/caseirinho.avif", categoria: "Doces Finos" },
-{ id: 12, nome: "Fatia de Torta", preco: 10.0, descricao: "Chocolate, Frutas Vermelhas, Chocolate e Ninho., Maracujá, Abacaxi, Olho de Sogra, Surpresa de Uva, Surpresa de Morango", imagem: "/public/imagens/fatia-torta.avif", categoria: "Doces Finos" },
-{ id: 20, nome: "Trufas", preco: 4.0, descricao: "Chocolate com recheio de Ninho", imagem: "/public/imagens/trunfas.avif", categoria: "Tradicionais e Gourmet" },
-{ id: 21, nome: "Docinhos", preco: 7.0, descricao: "Beijinho, Ninho, Brigadeiro, Romeu e Julieta, Churros, Surpresa de Uva, Casadinho", imagem: "/public/imagens/docinhos.avif", categoria: "Tradicionais e Gourmet" },
-{ id: 28, nome: "Coca-Cola 350ml", preco: 7.0, descricao: "Lata 350ml.", imagem: "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600", categoria: "Bebidas" },
-{ id: 29, nome: "Jesus 350ml", preco: 7.0, descricao: "Lata 350ml", imagem: "/public/imagens/jesus-350ml.webp", categoria: "Bebidas" },
-{ id: 30, nome: "Fanta 350ml", preco: 7.0, descricao: "Lata 350ml", imagem: "/public/imagens/fanta-350ml.webp", categoria: "Bebidas" },
+{ id: 8, nome: "Fatia de Torta", preco: 10.0, descricao: "Chocolate, Frutas Vermelhas, Chocolate e Ninho., Maracujá, Abacaxi, Olho de Sogra, Surpresa de Uva, Surpresa de Morango", imagem: "/public/imagens/fatia-torta.avif", categoria: "Doces Finos" },
+{ id: 9, nome: "Trufas", preco: 4.0, descricao: "Chocolate com recheio de Ninho", imagem: "/public/imagens/trunfas.avif", categoria: "Tradicionais e Gourmet" },
+{ id: 10, nome: "Docinhos", preco: 7.0, descricao: "Beijinho, Ninho, Brigadeiro, Romeu e Julieta, Churros, Surpresa de Uva, Casadinho", imagem: "/public/imagens/docinhos.avif", categoria: "Tradicionais e Gourmet" },
+{ id: 11, nome: "Coca-Cola 350ml", preco: 7.0, descricao: "Lata 350ml.", imagem: "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600", categoria: "Bebidas" },
+{ id: 12, nome: "Jesus 350ml", preco: 7.0, descricao: "Lata 350ml", imagem: "/public/imagens/jesus-350ml.webp", categoria: "Bebidas" },
+{ id: 13, nome: "Fanta 350ml", preco: 7.0, descricao: "Lata 350ml", imagem: "/public/imagens/fanta-350ml.webp", categoria: "Bebidas" },
 
 ];
 
@@ -323,7 +321,7 @@ function checkout() {
   if (!cart.length) return;
   const lines = cart.map((i) => `• ${i.nome} x${i.qty} = ${formatBRL(i.preco * i.qty)}`);
   const total = cart.reduce((s, i) => s + i.qty * i.preco, 0);
-  const msg = `*Novo Pedido* 🍔\n\n${lines.join("\n")}\n\n*Total: ${formatBRL(total)}*`;
+  const msg = `*Novo Pedido* 🎂​\n\n${lines.join("\n")}\n\n*Total: ${formatBRL(total)}*`;
   const url = `https://wa.me/${CONFIG.WHATSAPP}?text=${encodeURIComponent(msg)}`;
   window.open(url, "_blank");
 }
