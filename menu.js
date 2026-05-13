@@ -27,9 +27,9 @@ const MOCK_PRODUCTS = [
 { id: 8, nome: "Fatia de Torta", preco: 10.0, descricao: "Chocolate, Frutas Vermelhas, Chocolate e Ninho., Maracujá, Abacaxi, Olho de Sogra, Surpresa de Uva, Surpresa de Morango", imagem: "/public/imagens/fatia-torta.avif", categoria: "Doces Finos" },
 { id: 9, nome: "Trufas", preco: 4.0, descricao: "Chocolate com recheio de Ninho", imagem: "/public/imagens/trunfas.avif", categoria: "Tradicionais e Gourmet" },
 { id: 10, nome: "Docinhos", preco: 7.0, descricao: "Beijinho, Ninho, Brigadeiro, Romeu e Julieta, Churros, Surpresa de Uva, Casadinho", imagem: "/public/imagens/docinhos.avif", categoria: "Tradicionais e Gourmet" },
-{ id: 11, nome: "Coca-Cola 350ml", preco: 7.0, descricao: "Lata 350ml.", imagem: "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600", categoria: "Bebidas" },
-{ id: 12, nome: "Jesus 350ml", preco: 7.0, descricao: "Lata 350ml", imagem: "/public/imagens/jesus-350ml.webp", categoria: "Bebidas" },
-{ id: 13, nome: "Fanta 350ml", preco: 7.0, descricao: "Lata 350ml", imagem: "/public/imagens/fanta-350ml.webp", categoria: "Bebidas" },
+{ id: 11, nome: "Coca-Cola 350ml", preco: 7.0, descricao: "Lata 350ml.", imagem: "/public/imagens/coca-cola.avif", categoria: "Bebidas" },
+{ id: 12, nome: "Jesus 350ml", preco: 7.0, descricao: "Lata 350ml", imagem: "/public/imagens/jesus-350ml.avif", categoria: "Bebidas" },
+{ id: 13, nome: "Fanta 350ml", preco: 7.0, descricao: "Lata 350ml", imagem: "/public/imagens/fanta-350ml.avif", categoria: "Bebidas" },
 
 ];
 
