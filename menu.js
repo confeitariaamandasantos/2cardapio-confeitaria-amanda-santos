@@ -344,7 +344,7 @@ function checkout() {
 
   let msg = `*Novo Pedido* 🛍️\n\n${lines.join("\n")}\n\n💰 *Total: ${formatBRL(total)}*\n\n📦 Entrega: ${entrega}\n💳 Pagamento: ${paymentMethod}`;
   if (deliveryMethod === "delivery") {
-    msg += `\n\n📍 Por favor, informe o endereço de entrega para que o atendente continue seu pedido.`;
+    msg += `\n\n _Por favor, informe o endereço de entrega para que o atendente continue seu pedido_.`;
   }
   const url = `https://wa.me/${CONFIG.WHATSAPP}?text=${encodeURIComponent(msg)}`;
   window.open(url, "_blank");
