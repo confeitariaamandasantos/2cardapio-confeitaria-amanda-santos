@@ -153,7 +153,7 @@ html,body{ background:var(--bg); color:var(--text); font-family:-apple-system,Bl
 
 /* Footer drawer */
 .drawer-footer{
-  padding:16px 18px 18px; border-top:1px solid var(--border-soft);
+  padding: 2px 8px 8px; border-top:px solid var(--border-soft);
   background:#fff; max-height:62vh; overflow-y:auto;
 }
 .section-title{
