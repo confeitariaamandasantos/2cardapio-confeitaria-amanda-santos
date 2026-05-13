@@ -5,7 +5,7 @@ const CONFIG = {
   SHEET_ID: "1yELWMHl4AMWPbiLrJqIQ9C08zCOdruUQysWl4gu5cjQ",
   SHEET_NAME: "Cardapio",
   API_URL: "/api/menu",
-  WHATSAPP: "5598984940944",
+  WHATSAPP: "5598981740599",
   STORAGE_KEY: "cardapio_cart_v1",
 };
 
