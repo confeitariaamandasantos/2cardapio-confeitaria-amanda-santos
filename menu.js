@@ -18,7 +18,7 @@ const CONFIG = {
 const MOCK_PRODUCTS = [
   
 { id: 1, nome: "Bolo Vulcão", preco: 30.0, descricao: "Chocolate, Ninho, Chocolate e Ninho", imagem: "/public/imagens/bolo-vulcao1.avif", categoria: "Bolos e Tortas" },
-{ id: 2, nome: "Bolo Vulcão ( Morangos )", preco: 40.0, descricao: "Ninho, Chocolate, Chocolate e Ninho.", imagem: "/public/imagens/bolo-vulcao.avif", categoria: "Bolos e Tortas" },
+{ id: 2, nome: "Bolo Vulcão (Morangos)", preco: 40.0, descricao: "Ninho, Chocolate, Chocolate e Ninho.", imagem: "/public/imagens/bolo-vulcao.avif", categoria: "Bolos e Tortas" },
 { id: 3, nome: "Bolo de Ceoura", preco: 40.0, descricao: "Cenoura com Chocolate.", imagem: "/public/imagens/bolo-cenoura.avif", categoria: "Bolos e Tortas" },
 { id: 4, nome: "Bolo de Pote", preco: 10.0, descricao: "Cenoura com Chocolate.", imagem: "/public/imagens/bolo-pote.avif", categoria: "Bolos e Tortas" },
 { id: 5, nome: "Mini Vulcão", preco: 15.0, descricao: "Ninho, Chocolate, Chocolate e Ninho.", imagem: "/public/imagens/mini-vulcao.avif", categoria: "Bolos e Tortas" },
