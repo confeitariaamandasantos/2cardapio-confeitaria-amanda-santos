@@ -10,10 +10,19 @@ const CONFIG = {
 };
 
 const MOCK_PRODUCTS = [
-  { id: 1, nome: "Bolo Vulcão", preco: 28.9, descricao: "Ninho", imagem: "/imagens/logo-amanda.jpeg", categoria: "Bolos e Tortas" },
-  { id: 2, nome: "Bolo Vulcão", preco: 34.5, descricao: "Chocolate", imagem: "/imagens/bolo-vulcao.jpeg", categoria: "Bolos e Tortas" },
-  { id: 7, nome: "Caseirinho", preco: 49.9, descricao: "Chocolate", imagem: "/imagens/caseirinho.jpeg", categoria: "Doces Finos" },
-  { id: 28, nome: "Coca-Cola 350ml", preco: 7.0, descricao: "Lata 350ml.", imagem: "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600", categoria: "Bebidas" },
+{ id: 1, nome: "Bolo Vulcão", preco: 30.0, descricao: "Chocolate, Ninho, Chocolate e Ninho", imagem: "/public/imagens/bolo-vulcao1.avif", categoria: "Bolos e Tortas" },
+{ id: 2, nome: "Bolo Vulcão (Morangos)", preco: 40.0, descricao: "Ninho, Chocolate, Chocolate e Ninho.", imagem: "/public/imagens/bolo-vulcao.avif", categoria: "Bolos e Tortas" },
+{ id: 3, nome: "Bolo de Ceoura", preco: 40.0, descricao: "Cenoura com Chocolate.", imagem: "/public/imagens/bolo-cenoura.avif", categoria: "Bolos e Tortas" },
+{ id: 4, nome: "Bolo de Pote", preco: 10.0, descricao: "Cenoura com Chocolate.", imagem: "/public/imagens/bolo-pote.avif", categoria: "Bolos e Tortas" },
+{ id: 5, nome: "Mini Vulcão", preco: 15.0, descricao: "Ninho, Chocolate, Chocolate e Ninho.", imagem: "/public/imagens/mini-vulcao.avif", categoria: "Bolos e Tortas" },
+{ id: 6, nome: "Copo da Felicidade", preco: 10.0, descricao: "Chocolate trufado 50% cacau, chocolate branco trufado, com pedacos de chocolate meio amargo.", imagem: "/public/imagens/copo-felicidade.avif", categoria: "Bolos e Tortas" },
+{ id: 7, nome: "Caseirinho", preco: 15.0, descricao: "Chocolate, Dois Amores, Maracujá, Trigo, Formigueiro", imagem: "/public/imagens/caseirinho.avif", categoria: "Doces Finos" },
+{ id: 8, nome: "Fatia de Torta", preco: 10.0, descricao: "Chocolate, Frutas Vermelhas, Chocolate e Ninho., Maracujá, Abacaxi, Olho de Sogra, Surpresa de Uva, Surpresa de Morango", imagem: "/public/imagens/fatia-torta.avif", categoria: "Doces Finos" },
+{ id: 9, nome: "Trufas", preco: 4.0, descricao: "Chocolate com recheio de Ninho", imagem: "/public/imagens/trunfas.avif", categoria: "Tradicionais e Gourmet" },
+{ id: 10, nome: "Docinhos", preco: 7.0, descricao: "Beijinho, Ninho, Brigadeiro, Romeu e Julieta, Churros, Surpresa de Uva, Casadinho", imagem: "/public/imagens/docinhos.avif", categoria: "Tradicionais e Gourmet" },
+{ id: 11, nome: "Coca-Cola", preco: 7.0, descricao: "Lata 350ml.", imagem: "/public/imagens/coca-cola.avif", categoria: "Bebidas" },
+{ id: 12, nome: "Jesus", preco: 7.0, descricao: "Lata 350ml", imagem: "/public/imagens/jesus-350ml.avif", categoria: "Bebidas" },
+{ id: 13, nome: "Fanta", preco: 7.0, descricao: "Lata 350ml", imagem: "/public/imagens/fanta-350ml.avif", categoria: "Bebidas" },
 ];
 
 // Estado
