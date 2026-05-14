@@ -338,9 +338,9 @@ function checkout() {
   const total = cart.reduce((s, i) => s + i.qty * i.preco, 0);
   const entrega = deliveryMethod === "delivery" ? "Delivery" : "Retirar no estabelecimento";
 
-  let msg = `*Novo Pedido* 🛍️ \n\n${lines.join("\n")}\n\n 💰 *Total: ${formatBRL(total)}*\n\n📦 Entrega: ${entrega}\n 💳 Pagamento: ${paymentMethod}`;
+  let msg = `*Novo Pedido* 🛍️\n\n${lines.join("\n")}\n\n💰 *Total: ${formatBRL(total)}*\n\n📦 Entrega: ${entrega}\n💳 Pagamento: ${paymentMethod}`;
   if (deliveryMethod === "delivery") {
-    msg += `\n\n 📍 Por favor, informe o endereço de entrega para que o atendente continue seu pedido.`;
+    msg += `\n\n📍 Por favor, informe o endereço de entrega para que o atendente continue seu pedido.`;
   }
   const url = `https://wa.me/${CONFIG.WHATSAPP}?text=${encodeURIComponent(msg)}`;
   window.open(url, "_blank");
