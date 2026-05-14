@@ -5,12 +5,12 @@ const CONFIG = {
   SHEET_ID: "1yELWMHl4AMWPbiLrJqIQ9C08zCOdruUQysWl4gu5cjQ",
   SHEET_NAME: "Cardapio",
   API_URL: "/api/menu",
-  WHATSAPP: "5598981740599",
+  WHATSAPP: "5598984940944",
   STORAGE_KEY: "cardapio_cart_v1",
 };
 
 const MOCK_PRODUCTS = [
-  { id: 1, nome: "Bolo Vulcão", preco: 30.0, descricao: "Chocolate, Ninho, Chocolate e Ninho", imagem: "/public/imagens/bolo-vulcao1.avif", categoria: "Bolos e Tortas" },
+{ id: 1, nome: "Bolo Vulcão", preco: 30.0, descricao: "Chocolate, Ninho, Chocolate e Ninho", imagem: "/public/imagens/bolo-vulcao1.avif", categoria: "Bolos e Tortas" },
 { id: 2, nome: "Bolo Vulcão (Morangos)", preco: 40.0, descricao: "Ninho, Chocolate, Chocolate e Ninho.", imagem: "/public/imagens/bolo-vulcao.avif", categoria: "Bolos e Tortas" },
 { id: 3, nome: "Bolo de Ceoura", preco: 40.0, descricao: "Cenoura com Chocolate.", imagem: "/public/imagens/bolo-cenoura.avif", categoria: "Bolos e Tortas" },
 { id: 4, nome: "Bolo de Pote", preco: 10.0, descricao: "Cenoura com Chocolate.", imagem: "/public/imagens/bolo-pote.avif", categoria: "Bolos e Tortas" },
@@ -24,7 +24,7 @@ const MOCK_PRODUCTS = [
 { id: 12, nome: "Jesus", preco: 7.0, descricao: "Lata 350ml", imagem: "/public/imagens/jesus-350ml.avif", categoria: "Bebidas" },
 { id: 13, nome: "Fanta", preco: 7.0, descricao: "Lata 350ml", imagem: "/public/imagens/fanta-350ml.avif", categoria: "Bebidas" },
 
-];
+]
 
 // Estado
 let products = [];
@@ -234,7 +234,7 @@ function addToCart(id) {
   cartBtn.classList.remove("bump");
   void cartBtn.offsetWidth;
   cartBtn.classList.add("bump");
-  openCart();
+  if (isDesktop()) openCart();
   toast(`${product.nome} adicionado!`);
 }
 
@@ -327,7 +327,6 @@ function isDesktop() { return window.matchMedia("(min-width: 901px)").matches; }
 function openCart() {
   drawer.classList.add("open");
   document.body.classList.add("drawer-open");
-  if (!isDesktop()) overlay.classList.add("show");
 }
 function closeCart() {
   drawer.classList.remove("open");
@@ -344,7 +343,7 @@ function checkout() {
 
   let msg = `*Novo Pedido* 🛍️\n\n${lines.join("\n")}\n\n💰 *Total: ${formatBRL(total)}*\n\n📦 Entrega: ${entrega}\n💳 Pagamento: ${paymentMethod}`;
   if (deliveryMethod === "delivery") {
-    msg += `\n\n _Por favor, informe o endereço de entrega para que o atendente continue seu pedido_.`;
+    msg += `\n\n📍 Por favor, informe o endereço de entrega para que o atendente continue seu pedido.`;
   }
   const url = `https://wa.me/${CONFIG.WHATSAPP}?text=${encodeURIComponent(msg)}`;
   window.open(url, "_blank");
