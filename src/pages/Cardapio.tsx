@@ -344,7 +344,7 @@ export default function Cardapio() {
           <button
             disabled={!cart.length}
             onClick={checkout}
-            className="w-full py-3.5 rounded-lg bg-primary text-primary-foreground font-semibold shadow-md hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition inline-flex items-center justify-center gap-2"
+            className="w-full py-3.5 rounded-lg bg-secondary text-primary-foreground font-semibold shadow-md hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition inline-flex items-center justify-center gap-2"
           >
             Finalizar Pedido pelo WhatsApp
           </button>
