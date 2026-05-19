@@ -199,7 +199,7 @@ export default function Cardapio() {
       {!drawerOpen && (
         <button
           onClick={() => setDrawerOpen(true)}
-          className="fixed left-1/2 -translate-x-1/2 bottom-5 z-40 bg-primary text-primary-foreground px-6 py-3.5 rounded-full font-semibold shadow-lg hover:bg-primary/90 transition inline-flex items-center gap-2.5 whitespace-nowrap leading-none"
+          className="fixed left-1/2 -translate-x-1/2 bottom-5 z-40 bg-secondary text-primary-foreground px-6 py-3.5 rounded-full font-semibold shadow-lg hover:bg-primary/90 transition inline-flex items-center gap-2.5 whitespace-nowrap leading-none"
         >
           <ShoppingBag className="w-5 h-5" />
           Ver Sacola
@@ -342,7 +342,7 @@ export default function Cardapio() {
           <button
             disabled={!cart.length}
             onClick={checkout}
-            className="w-full py-3.5 rounded-lg bg-primary text-primary-foreground font-semibold shadow-md hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition inline-flex items-center justify-center gap-2"
+            className="w-full py-3.5 rounded-lg bg-secondary text-primary-foreground font-semibold shadow-md hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition inline-flex items-center justify-center gap-2"
           >
             Finalizar Pedido pelo WhatsApp
           </button>
