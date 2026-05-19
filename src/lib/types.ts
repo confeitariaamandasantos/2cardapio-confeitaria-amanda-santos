@@ -18,12 +18,13 @@ export type Produto = {
 export type CartItem = {
   id: string;
   nome: string;
+  descricao?: string;
   preco: number;
   imagem: string;
   qty: number;
 };
 
-export const WHATSAPP = "5598981740599";
+export const WHATSAPP = "5598984940944";
 
 export const formatBRL = (v: number) =>
   Number(v).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });

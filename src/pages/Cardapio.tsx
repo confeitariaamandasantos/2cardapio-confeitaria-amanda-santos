@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ShoppingBag, Plus, Minus, Trash2, X, Settings } from "lucide-react";
+import logoAmanda from "@/assets/logo-amanda.jpeg";
 import { toast } from "sonner";
 
 const STORAGE_KEY = "cardapio_cart_v1";
@@ -81,7 +82,7 @@ export default function Cardapio() {
       if (ex) return cur.map((i) => (i.id === p.id ? { ...i, qty: i.qty + 1 } : i));
       return [
         ...cur,
-        { id: p.id, nome: p.nome, preco: Number(p.preco), imagem: p.imagem, qty: 1 },
+        { id: p.id, nome: p.nome, descricao: p.descricao, preco: Number(p.preco), imagem: p.imagem, qty: 1 },
       ];
     });
     toast.success(`${p.nome} adicionado!`);
@@ -101,15 +102,16 @@ export default function Cardapio() {
 
   const checkout = () => {
     if (!cart.length) return;
-    const lines = cart.map(
-      (i) => `• ${i.nome} x${i.qty} — ${formatBRL(i.preco * i.qty)}`,
-    );
+    const lines = cart.map((i) => {
+      const desc = i.descricao?.trim() ? ` (${i.descricao.trim()})` : "";
+      return `• ${i.nome}${desc} x${i.qty} — ${formatBRL(i.preco * i.qty)}`;
+    });
     const entrega = delivery === "delivery" ? "Delivery" : "Retirar no estabelecimento";
     let msg = `*Novo Pedido* 🛍️\n\n${lines.join(
       "\n",
-    )}\n\n💰 *Total: ${formatBRL(total)}*\n\n📦 Entrega: ${entrega}\n💳 Pagamento: ${payment}`;
+    )}\n\n 💰 *Total: ${formatBRL(total)}*\n\n 📦 Entrega: ${entrega}\n 💳 Pagamento: ${payment}`;
     if (delivery === "delivery")
-      msg += `\n\n📍 Por favor, informe o endereço de entrega.`;
+      msg += `\n\n 📍 Por favor, informe o endereço, ou localização de entrega.`;
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
   };
 
@@ -118,9 +120,9 @@ export default function Cardapio() {
       <header className="border-b bg-card sticky top-0 z-30 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3 min-w-0">
-            <span className="text-3xl">🎂​</span>
+            <img src={logoAmanda} alt="Confeitaria Amanda Santos" className="w-12 h-12 rounded-full object-cover shrink-0" />
             <div className="min-w-0">
-              <h1 className="text-lg sm:text-xl font-bold leading-tight truncate">CONFEITARIA AMANDA SANTOS</h1>
+              <h1 className="text-lg sm:text-xl font-bold leading-tight truncate">Confeitaria Amanda Santos</h1>
               <p className="text-xs sm:text-sm text-muted-foreground">Peça pelo WhatsApp</p>
             </div>
           </div>
@@ -199,7 +201,7 @@ export default function Cardapio() {
       {!drawerOpen && (
         <button
           onClick={() => setDrawerOpen(true)}
-          className="fixed left-1/2 -translate-x-1/2 bottom-5 z-40 bg-secondary text-primary-foreground px-6 py-3.5 rounded-full font-semibold shadow-lg hover:bg-primary/90 transition inline-flex items-center gap-2.5 whitespace-nowrap leading-none"
+          className="fixed left-1/2 -translate-x-1/2 bottom-5 z-40 bg-primary text-primary-foreground px-6 py-3.5 rounded-full font-semibold shadow-lg hover:bg-primary/90 transition inline-flex items-center gap-2.5 whitespace-nowrap leading-none"
         >
           <ShoppingBag className="w-5 h-5" />
           Ver Sacola
@@ -342,7 +344,7 @@ export default function Cardapio() {
           <button
             disabled={!cart.length}
             onClick={checkout}
-            className="w-full py-3.5 rounded-lg bg-secondary text-primary-foreground font-semibold shadow-md hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition inline-flex items-center justify-center gap-2"
+            className="w-full py-3.5 rounded-lg bg-primary text-primary-foreground font-semibold shadow-md hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition inline-flex items-center justify-center gap-2"
           >
             Finalizar Pedido pelo WhatsApp
           </button>
