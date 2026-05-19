@@ -23,7 +23,7 @@ export type CartItem = {
   qty: number;
 };
 
-export const WHATSAPP = "5598981740599";
+export const WHATSAPP = "5598984940944";
 
 export const formatBRL = (v: number) =>
   Number(v).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });

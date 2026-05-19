@@ -105,11 +105,11 @@ export default function Cardapio() {
       (i) => `• ${i.nome} x${i.qty} — ${formatBRL(i.preco * i.qty)}`,
     );
     const entrega = delivery === "delivery" ? "Delivery" : "Retirar no estabelecimento";
-    let msg = `*Novo Pedido* 🛍️ \n\n${lines.join(
+    let msg = `*Novo Pedido* 🛍️\n\n${lines.join(
       "\n",
-    )}\n\n 💰 *Total: ${formatBRL(total)}*\n\n 📦 Entrega: ${entrega}\n 💳 Pagamento: ${payment}`;
+    )}\n\n💰 *Total: ${formatBRL(total)}*\n\n📦 Entrega: ${entrega}\n💳 Pagamento: ${payment}`;
     if (delivery === "delivery")
-      msg += `\n\n 📍 Por favor, informe o endereço de entrega.`;
+      msg += `\n\n📍 Por favor, informe o endereço de entrega.`;
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
   };
 
