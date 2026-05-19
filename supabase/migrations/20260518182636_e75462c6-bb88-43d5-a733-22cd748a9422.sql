@@ -109,9 +109,9 @@ with c as (
 insert into public.produtos (nome, descricao, preco, imagem, categoria_id, ordem)
 select v.nome, v.descricao, v.preco, v.imagem, c.id, v.ordem
 from (values
-  ('Bolo Vulcão',  'Ninho',     28.90, '/imagens/logo-amanda.jpeg', 'Bolos e Tortas', 1),
-  ('Bolo Vulcão',  'Chocolate', 34.50, '/imagens/bolo-vulcao.jpeg', 'Bolos e Tortas', 2),
-  ('Caseirinho',   'Chocolate', 49.90, '/imagens/caseirinho.jpeg', 'Doces Finos', 1),
-  ('Coca-Cola 350ml', 'Lata 350ml.', 7.00, 'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600', 'Bebidas', 1)
+  ('Bolo Vulcão',  'Ninho',     28.90, '/imagens/logo-amanda.avif', 'Bolos e Tortas', 1),
+  ('Bolo Vulcão',  'Chocolate', 34.50, '/imagens/bolo-vulcao.avif', 'Bolos e Tortas', 2),
+  ('Caseirinho',   'Chocolate', 49.90, '/imagens/caseirinho.avif', 'Doces Finos', 1),
+  ('Coca-Cola 350ml', 'Lata 350ml.', 7.00, '/imagens/caseirinho.avif', 'Bebidas', 1)
 ) as v(nome, descricao, preco, imagem, cat_nome, ordem)
 join c on c.nome = v.cat_nome;
