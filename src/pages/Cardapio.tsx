@@ -118,9 +118,9 @@ export default function Cardapio() {
       <header className="border-b bg-card sticky top-0 z-30 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3 min-w-0">
-            <span className="text-3xl">🧁</span>
+            <span className="text-3xl">🎂​</span>
             <div className="min-w-0">
-              <h1 className="text-lg sm:text-xl font-bold leading-tight truncate">Confeitaria Amanda Santos</h1>
+              <h1 className="text-lg sm:text-xl font-bold leading-tight truncate">CONFEITARIA AMANDA SANTOS</h1>
               <p className="text-xs sm:text-sm text-muted-foreground">Peça pelo WhatsApp</p>
             </div>
           </div>
